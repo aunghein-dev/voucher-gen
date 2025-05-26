@@ -57,21 +57,21 @@ export default function VouncherGenerator() {
 
       <div className="bg-gray-800 max-w-3xl mx-auto mt-10 rounded-md text-white text-sm">
         <ul>
-          <li className="grid grid-cols-6 p-2 border-b border-gray-500 font-bold text-center">
+          <li className="grid grid-cols-[10%_30%_15%_10%_15%_20%] p-2 border-b border-gray-500 text-center">
             <span className="p-2">No</span>
-            <span className="p-2">Item</span>
-            <span className="p-2">Unit Price</span>
-            <span className="p-2">Quantity</span>
-            <span className="p-2">Sub Total</span>
+            <span className="p-2 text-left">Item</span>
+            <span className="p-2">Unit</span>
+            <span className="p-2">Qty.</span>
+            <span className="p-2">Total</span>
             <span className="p-2">Action</span>
           </li>
           {myCart.map((item, index) => (
             <li
               key={item.name}
-              className="grid grid-cols-6 p-2 border-b border-gray-600 text-center items-center"
+              className="grid grid-cols-[10%_30%_15%_10%_15%_20%] p-2 border-b border-gray-600 text-center items-center text-xs"
             >
               <span>{index + 1}</span>
-              <span>{item.name}</span>
+              <span className="text-left break-words">{item.name}</span>
               <span>{item.price}</span>
               <span>{item.quantity}</span>
               <span>{item.subTotal}</span>
@@ -93,3 +93,4 @@ export default function VouncherGenerator() {
     </div>
   )
 }
+
