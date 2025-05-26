@@ -50,8 +50,8 @@ export default function VouncherGenerator() {
       
       <form action={handleAddItem} className={form} >
         <input className={input} type="text" name="item" placeholder="Enter Item" />
-        <input className={input} type="number" name="unitPrice" placeholder="Enter Unit Price" />
-        <input className={input} type="number" name="qty" placeholder="Enter Quantity" />
+        <input className={input} inputMode="numeric" pattern="[0-9]*" name="unitPrice" placeholder="Enter Unit Price" />
+<input className={input} inputMode="numeric" pattern="[0-9]*" name="qty" placeholder="Enter Quantity" />
          <button type="submit" className={button}>Add Items</button>
       </form>
 
